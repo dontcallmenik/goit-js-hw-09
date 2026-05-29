@@ -29,6 +29,8 @@ form.addEventListener('input', event => {
 
 // 3  отправка формы
 form.addEventListener('submit', event => {
+  event.preventDefault(); // ← важливо
+
   const { email, message } = formData;
   if (email === '' || message === '') {
     alert('Fill please all fields!');
